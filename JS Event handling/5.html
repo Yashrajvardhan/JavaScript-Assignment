@@ -1,0 +1,26 @@
+<!-- q5. Create a text input box and a div below it. As the user types, the div should display the same text in real time. -->
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Live Text Display</title>
+  <script defer>
+    document.addEventListener('DOMContentLoaded', () => {
+      const inputBox = document.getElementById('inputBox');
+      const display = document.getElementById('display');
+
+      inputBox.addEventListener('input', () => {
+        display.textContent = inputBox.value;
+      });
+    });
+  </script>
+</head>
+<body>
+
+  <input type="text" id="inputBox" placeholder="Type something..."><br>
+  <div id="display"></div>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+
+<!-- q1. write a code for me usinf html css and javascript, 
+it has a button named show paragraph , after clicking the button a paragraph should be visible and the button name should change to hide paragraph
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+
+  <style>
+    #paragraph {
+      display: none;
+    }
+  </style>
+
+  <script defer>
+    document.addEventListener("DOMContentLoaded", function () {
+      const btn = document.getElementById("toggleBtn");
+      const para = document.getElementById("paragraph");
+
+      btn.addEventListener("click", function () {
+        if (para.style.display === "none") {
+          para.style.display = "block";
+          btn.textContent = "Hide Paragraph";
+        } else {
+          para.style.display = "none";
+          btn.textContent = "Show Paragraph";
+        }
+      });
+    });
+  </script>
+
+</head>
+<body>
+  <button id="toggleBtn">Show Paragraph</button>
+  <p id="paragraph">Welcome Yash raj vardhan!</p>
+</body>
+</html>
